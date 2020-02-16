@@ -1,4 +1,9 @@
 
+import clasesJava.ModelManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 public class MenuPrincipal extends javax.swing.JFrame {
 
     GUIconsulta1 consulta1;
@@ -6,10 +11,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     GUIconsulta3 consulta3;
     GUIconsulta4 consulta4;
     
-    public MenuPrincipal() {
+    ModelManager model;
+    
+    public MenuPrincipal() throws Exception {
         initComponents();
         setSize(325,510);
-        consulta1 = new GUIconsulta1();
+        
+        model = new ModelManager("../F1.owl");
+        consulta1 = new GUIconsulta1(model);
         //los dos primeros son para la distancias con los botones de consulta
         consulta1.setBounds(330,10,1120,510); 
         add(consulta1);
@@ -30,7 +39,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         add(consulta4);
         consulta4.setVisible(false);
         
-        
+   
     }
 
     /**
@@ -259,7 +268,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuPrincipal().setVisible(true);
+                try {
+                    new MenuPrincipal().setVisible(true);
+                } catch (Exception ex) {
+                    Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

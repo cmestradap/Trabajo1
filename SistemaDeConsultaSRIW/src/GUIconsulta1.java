@@ -1,25 +1,23 @@
 
+import clasesJava.ModelManager;
 import javax.swing.DefaultListModel;
+import javax.swing.table.DefaultTableModel;
 
 public class GUIconsulta1 extends javax.swing.JPanel {
             
     DefaultListModel model = new DefaultListModel<>();
+    ModelManager mm;
     
-    public void cargardatos(){
-        model.addElement("Persona");
-        model.addElement("Entrenador");
-        model.addElement("Jugador");
-        model.addElement("Equipo");
-        model.addElement("Estadio");
-        
+    private void cargardatos(){
+        model.addAll(mm.getEntities());
         ListaEntidades.setModel(model);
     }
    
     
-    public GUIconsulta1() {
+    public GUIconsulta1(ModelManager m) {
+        mm = m;
         initComponents();
-        cargardatos();
-                 
+        cargardatos();  
     }
 
 
@@ -47,6 +45,11 @@ public class GUIconsulta1 extends javax.swing.JPanel {
 
         ListaEntidades.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Entidades:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
         ListaEntidades.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ListaEntidades.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                ListaEntidadesValueChanged(evt);
+            }
+        });
         jScrollPane1.setViewportView(ListaEntidades);
 
         BtVizualizarInstancias.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -192,6 +195,11 @@ public class GUIconsulta1 extends javax.swing.JPanel {
     private void BtnIndirectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIndirectoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnIndirectoActionPerformed
+
+    private void ListaEntidadesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_ListaEntidadesValueChanged
+        String entity = ListaEntidades.getSelectedValue().toString();
+        jTable1.setModel(new DefaultTableModel(new Object[0][0], mm.getDataAttributes(entity).toArray()));
+    }//GEN-LAST:event_ListaEntidadesValueChanged
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
