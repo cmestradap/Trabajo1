@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.futbolistas.com"
+     xml:base="http://www.futbolistas.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.futbolistas.com#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.futbolistas.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.futbolistas.com#Local_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#Local_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#currentTeam -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#currentTeam">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.futbolistas.com#owner_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#currentTeamManager -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#currentTeamManager">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.futbolistas.com#directed_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#directed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#directed_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#host -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#host">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.futbolistas.com#trained_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#owner_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#owner_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.futbolistas.com#tenant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#tenant -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#tenant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#train -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#train">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.futbolistas.com#trained_by"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#trained_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#trained_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#trained_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.futbolistas.com#trained_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.futbolistas.com#Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Age">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Manager"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#BirthDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#BirthDate">
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Manager"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Built -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Built">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Stadium"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Capacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Stadium"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Debut -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Debut">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Manager"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Foundation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Foundation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Team"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Height">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#League -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#League">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Team"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Stadium"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Manager"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Team"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Nationality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Nationality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Manager"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#NickName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#NickName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Manager"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#NumGoals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#NumGoals">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Number">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Position -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Position">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Surname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Surname">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Manager"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.futbolistas.com#Weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.futbolistas.com#Weight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.futbolistas.com#Player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.futbolistas.com#Individual -->
+
+    <owl:Class rdf:about="http://www.futbolistas.com#Individual">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.futbolistas.com#Manager -->
+
+    <owl:Class rdf:about="http://www.futbolistas.com#Manager">
+        <rdfs:subClassOf rdf:resource="http://www.futbolistas.com#Individual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.futbolistas.com#Player -->
+
+    <owl:Class rdf:about="http://www.futbolistas.com#Player">
+        <rdfs:subClassOf rdf:resource="http://www.futbolistas.com#Individual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.futbolistas.com#Stadium -->
+
+    <owl:Class rdf:about="http://www.futbolistas.com#Stadium">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.futbolistas.com#Team -->
+
+    <owl:Class rdf:about="http://www.futbolistas.com#Team">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador1">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo5"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador3"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</www:Age>
+        <www:BirthDate>1971-01-18</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</www:Debut>
+        <www:Name>Josep</www:Name>
+        <www:Nationality>Spanish</www:Nationality>
+        <www:NickName>Pep</www:NickName>
+        <www:Surname>Guardiola i Sala</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador2">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo3"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador2"/>
+        <www:BirthDate>1963-01-23</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</www:Debut>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</www:Debut>
+        <www:Name>José Mário</www:Name>
+        <www:Nationality>Portuguese</www:Nationality>
+        <www:NickName>Mou</www:NickName>
+        <www:Surname>dos Santos Mourinho Félix</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador3">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo8"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador1"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</www:Age>
+        <www:BirthDate>1965-02-24</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</www:Debut>
+        <www:Name>Hans-Dieter</www:Name>
+        <www:Nationality>German</www:Nationality>
+        <www:NickName>Hansi</www:NickName>
+        <www:Surname>Flick</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador4">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo9"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador6"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</www:Age>
+        <www:BirthDate>1973-08-29</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</www:Debut>
+        <www:Name>Thomas</www:Name>
+        <www:Nationality>German</www:Nationality>
+        <www:Surname>Tuchel</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador5">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo4"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador8"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</www:Age>
+        <www:BirthDate>1967-06-16</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</www:Debut>
+        <www:Name>Jürgen Norbert</www:Name>
+        <www:Nationality>German</www:Nationality>
+        <www:NickName>The Normal One</www:NickName>
+        <www:Surname>Klopp</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador6">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo1"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador4"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</www:Age>
+        <www:BirthDate>1972-06-23</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</www:Debut>
+        <www:Name>Zinédine</www:Name>
+        <www:Nationality>French</www:Nationality>
+        <www:NickName>Zizou</www:NickName>
+        <www:Surname>Zidane</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador7">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo2"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador5"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</www:Age>
+        <www:BirthDate>1958-09-27</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</www:Debut>
+        <www:Nationality>Spanish</www:Nationality>
+        <www:Surname>Enrique</www:Surname>
+        <www:Surname>Setién Solar</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador8">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo7"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador7"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</www:Age>
+        <www:BirthDate>1970-04-28</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</www:Debut>
+        <www:Name>Diego Pablo</www:Name>
+        <www:Nationality>Argentine</www:Nationality>
+        <www:NickName>El Cholo</www:NickName>
+        <www:Surname>Simeone</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Entrenador9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Entrenador9">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Manager"/>
+        <www:currentTeamManager rdf:resource="http://www.futbolistas.com#Equipo6"/>
+        <www:train rdf:resource="http://www.futbolistas.com#Jugador9"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</www:Age>
+        <www:BirthDate>1959-01-10</www:BirthDate>
+        <www:Debut rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</www:Debut>
+        <www:Name>Mauricio</www:Name>
+        <www:Nationality>Italian</www:Nationality>
+        <www:NickName>Míster 33</www:NickName>
+        <www:Surname>Sarri</www:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo1">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio1"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador6"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador4"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1897</www:Foundation>
+        <www:League>La Liga</www:League>
+        <www:Name>Real Madrid Club de Fútbol</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo2">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio2"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador7"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador5"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1899</www:Foundation>
+        <www:League>La Liga</www:League>
+        <www:Name>Fútbol Club Barcelona</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo3">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio6"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador2"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador2"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1882</www:Foundation>
+        <www:League>Premier League</www:League>
+        <www:Name>Tottenham Hotspur Football Club</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo4">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio3"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador5"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador8"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1892</www:Foundation>
+        <www:League>La Liga</www:League>
+        <www:Name>Liverpool Football Club</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo5">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio4"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador1"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador3"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1880</www:Foundation>
+        <www:League>Premier League</www:League>
+        <www:Name>Manchester City Football Club</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo6">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio7"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador9"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador9"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1897</www:Foundation>
+        <www:League>Serie A</www:League>
+        <www:Name>Juventus de Turín</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo7">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio5"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador8"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador7"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1897</www:Foundation>
+        <www:League>La Liga</www:League>
+        <www:Name>Club Atlético de Madrid</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo8">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio8"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador3"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador1"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1900</www:Foundation>
+        <www:League>Bundes League</www:League>
+        <www:Name>Bayern de Múnich</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Equipo9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Equipo9">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Team"/>
+        <www:Local_in rdf:resource="http://www.futbolistas.com#Estadio9"/>
+        <www:directed_by rdf:resource="http://www.futbolistas.com#Entrenador4"/>
+        <www:owner_of rdf:resource="http://www.futbolistas.com#Jugador6"/>
+        <www:Foundation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</www:Foundation>
+        <www:League>Ligue 1</www:League>
+        <www:Name>París Saint-Germain Football Club</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio1">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador4"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo1"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1947</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81044</www:Capacity>
+        <www:Location>Madrid</www:Location>
+        <www:Name>Santiago Bernabéu</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio2">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador5"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo2"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1957</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99354</www:Capacity>
+        <www:Location>Barcelona</www:Location>
+        <www:Name>Camp Nou</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio3">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador8"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo4"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1884</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54074</www:Capacity>
+        <www:Location>Liverpool</www:Location>
+        <www:Name>Anfield</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio4">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador3"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo5"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55097</www:Capacity>
+        <www:Location>Manchester</www:Location>
+        <www:Name>Etihad Stadium</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio5">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador7"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo7"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68456</www:Capacity>
+        <www:Location>Madrid</www:Location>
+        <www:Name>Wanda Metropolitano</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio6">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador2"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo3"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40157</www:Capacity>
+        <www:Location>London</www:Location>
+        <www:Name>Tottenham Hotspur Stadium</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio7">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador9"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo6"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41000</www:Capacity>
+        <www:Location>Turin</www:Location>
+        <www:Name>Juventus Stadium</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio8">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador1"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo8"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75000</www:Capacity>
+        <www:Location>Munich</www:Location>
+        <www:Name>Allianz Arena</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Estadio9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Estadio9">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Stadium"/>
+        <www:host rdf:resource="http://www.futbolistas.com#Jugador6"/>
+        <www:tenant rdf:resource="http://www.futbolistas.com#Equipo9"/>
+        <www:Built rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1897</www:Built>
+        <www:Capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48712</www:Capacity>
+        <www:Location>Paris</www:Location>
+        <www:Name>Parc des Princes</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador1">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo8"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador3"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio8"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</www:Age>
+        <www:BirthDate>1988-08-21</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.85</www:Height>
+        <www:Name>Robert</www:Name>
+        <www:Nationality>Polish</www:Nationality>
+        <www:NickName>LewanGolski</www:NickName>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">411</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</www:Number>
+        <www:Position>Forward</www:Position>
+        <www:Surname>Lewandowski</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador2">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo3"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador2"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio6"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</www:Age>
+        <www:BirthDate>1996-04-11</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.88</www:Height>
+        <www:Name>Bamidele Jermaine</www:Name>
+        <www:Nationality>English</www:Nationality>
+        <www:NickName>Dele</www:NickName>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</www:Number>
+        <www:Position>Midfielder</www:Position>
+        <www:Surname>Alli</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador3">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo5"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador1"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio4"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</www:Age>
+        <www:BirthDate>1991-06-28</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.81</www:Height>
+        <www:Name>Kevin</www:Name>
+        <www:Nationality>Belgian</www:Nationality>
+        <www:NickName>The Prince</www:NickName>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">97</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</www:Number>
+        <www:Position>Midfielder</www:Position>
+        <www:Surname>De Bruyne</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador4">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo1"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador6"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio1"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</www:Age>
+        <www:BirthDate>1987-12-19</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.87</www:Height>
+        <www:Name>Karim Mostafa</www:Name>
+        <www:Nationality>French</www:Nationality>
+        <www:NickName>El Gato</www:NickName>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">304</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</www:Number>
+        <www:Position>Forward</www:Position>
+        <www:Surname>Benzema</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador5">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo2"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador7"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio2"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</www:Age>
+        <www:BirthDate>1988-03-10</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.84</www:Height>
+        <www:Name>Ivan</www:Name>
+        <www:Nationality>Croatian</www:Nationality>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</www:Number>
+        <www:Position>Midfielder</www:Position>
+        <www:Surname>Rakete</www:Surname>
+        <www:Surname>Rakitić</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador6">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo9"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador4"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio9"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</www:Age>
+        <www:BirthDate>1987-02-14</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.85</www:Height>
+        <www:Name>Edinson Roberto</www:Name>
+        <www:Nationality>Uruguayan</www:Nationality>
+        <www:NickName>El Matador</www:NickName>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">351</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</www:Number>
+        <www:Position>Forward</www:Position>
+        <www:Surname>Cavani Gómez</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador7">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo7"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador8"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio5"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</www:Age>
+        <www:BirthDate>1992-10-23</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.89</www:Height>
+        <www:Name>Alvaro</www:Name>
+        <www:Nationality>Spanish</www:Nationality>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">143</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</www:Number>
+        <www:Position>Forward</www:Position>
+        <www:Surname>Morata Martín</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador8">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo4"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador5"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio3"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</www:Age>
+        <www:BirthDate>1992-04-10</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.75</www:Height>
+        <www:Name>Sadio</www:Name>
+        <www:Nationality>Senegalese</www:Nationality>
+        <www:NickName>Sad10</www:NickName>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">142</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</www:Number>
+        <www:Position>Midfielder</www:Position>
+        <www:Surname>Mané</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69</www:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.futbolistas.com#Jugador9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador9">
+        <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo6"/>
+        <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador9"/>
+        <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio7"/>
+        <www:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</www:Age>
+        <www:BirthDate>1993-11-15</www:BirthDate>
+        <www:Height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.76</www:Height>
+        <www:Name>Paulo Exequiel</www:Name>
+        <www:Nationality>Argentine</www:Nationality>
+        <www:NickName>La Joya</www:NickName>
+        <www:NumGoals rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">116</www:NumGoals>
+        <www:Number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</www:Number>
+        <www:Position>Forward</www:Position>
+        <www:Surname>Dybala Suárez</www:Surname>
+        <www:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</www:Weight>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

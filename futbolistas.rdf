@@ -2,359 +2,372 @@
 <rdf:RDF
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:py="http://futbolistas.com/jugador#"
-	xmlns:tr="http://futbolistas.com/entrenador#"
-	xmlns:team="http://futbolistas.com/equipo#"
-	xmlns:stdm="http://futbolistas.com/estadio#">
+	xmlns:py="http://futbolistas.com/SoccerPlayer#"
+	xmlns:tr="http://futbolistas.com/SportsManager#"
+	xmlns:team="http://futbolistas.com/SportsTeam#"
+	xmlns:stdm="http://futbolistas.com/Arena#">
 	
 	
 	
 <!-- CLASES -->
 
-<rdfs:Class rdf:ID="Persona" />
+<rdfs:Class rdf:ID="Person" />
 
-<rdfs:Class rdf:ID="Jugador">
-	<rdfs:subClassOf rdf:resource="#Persona"/>
+<rdfs:Class rdf:ID="SoccerPlayer">
+	<rdfs:subClassOf rdf:resource="#Person"/>
 </rdfs:Class>
 
-<rdfs:Class rdf:ID="Entrenador">
-	<rdfs:subClassOf rdf:resource="#Persona"/>
+<rdfs:Class rdf:ID="SportsManager">
+	<rdfs:subClassOf rdf:resource="#Person"/>
 </rdfs:Class>
 
-<rdfs:Class rdf:ID="Estadio"/>
+<rdfs:Class rdf:ID="Arena"/>
 
-<rdfs:Class rdf:ID="Equipo"/>
+<rdfs:Class rdf:ID="SportsTeam"/>
 	
 	
 
 <!-- PROPERTY -->
 
-<rdf:Property rdf:ID="Dirige">
-	<rdfs:domain rdf:resource="Entrenador"/>
-	<rdfs:range rdf:resource="Equipo"/>
-</rdf:Property>
-	
-<rdf:Property rdf:ID="Dirigido_Por">
-	<rdfs:domain rdf:resource="Equipo"/>
-	<rdfs:range rdf:resource="Entrenador"/>
+<rdf:Property rdf:ID="currentTeamManager">
+	<rdfs:domain rdf:resource="SportsManager"/>
+	<rdfs:range rdf:resource="SportsTeam"/>
+</rdf:property>
+
+<rdf:Property rdf:ID="directed_by">
+	<rdfs:domain rdf:resource="SportsTeam"/>
+	<rdfs:range rdf:resource="SportsManager"/>
 </rdf:Property>
 
-<rdf:Property rdf:ID="Sede_De">
-	<rdfs:domain rdf:resource="Estadio"/>
-	<rdfs:range rdf:resource="Equipo"/>
+<rdf:Property rdf:ID="train">
+	<rdfs:domain rdf:resource="SportsManager"/>
+	<rdfs:range rdf:resource="SoccerPlayer"/>
 </rdf:Property>
 
-<rdf:Property rdf:ID="Tiene">
-	<rdfs:domain rdf:resource="Equipo"/>
-	<rdfs:range rdf:resource="Estadio"/>
+<rdf:Property rdf:ID="trained_by">
+	<rdfs:domain rdf:resource="SoccerPlayer"/>
+	<rdfs:range rdf:resource="SportsManager"/>
 </rdf:Property>
 
-<rdf:Property rdf:ID="Entrenado_Por">
-	<rdfs:domain rdf:resource="Futbolista"/>
-	<rdfs:range rdf:resource="Entrenador"/>
+<rdf:Property rdf:ID="owner_of">
+	<rdfs:domain rdf:resource="SportsTeam"/>
+	<rdfs:range rdf:resource="SoccerPlayer"/>
 </rdf:Property>
 
-<rdf:Property rdf:ID="Poseedor_De">
-	<rdfs:domain rdf:resource="Equipo"/>
-	<rdfs:range rdf:resource="Futbolista"/>
+<rdf:Property rdf:ID="currentTeam">
+	<rdfs:domain rdf:resource="SoccerPlayer"/>
+	<rdfs:range rdf:resource="SportsTeam"/>
+</rdf:property>
+
+<rdf:Property rdf:ID="Local_in">
+	<rdfs:domain rdf:resource="SportsTeam"/>
+	<rdfs:range rdf:resource="Arena"/>
 </rdf:Property>
 
-<rdf:Property rdf:ID="Perteneciente_a">
-	<rdfs:domain rdf:resource="Futbolista"/>
-	<rdfs:range rdf:resource="Equipo"/>
+<rdf:Property rdf:ID="tenant">
+	<rdfs:domain rdf:resource="Arena"/>
+	<rdfs:range rdf:resource="SportsTeam"/>
+</rdf:property>
+
+<rdf:Property rdf:ID="host">
+	<rdfs:domain rdf:resource="Arena"/>
+	<rdfs:range rdf:resource="SoccerPlayer"/>
 </rdf:Property>
-	
-	
+
+<rdf:Property rdf:ID="trained_in">
+	<rdfs:domain rdf:resource="SoccerPlayer"/>
+	<rdfs:range rdf:resource="Arena"/>
+</rdf:Property>
 
 <!-- INSTANCIAS -->
 	
-	<!-- FUTBOLISTAS -->
+	<!-- SoccerPlayer -->
 	
-		<rdf:Description rdf:about="http://futbolistas.com/jugador/Cristiano-Ronaldo">
-			<py:Nombre>Cristiano Ronaldo</py:Nombre>
-			<py:Apellidos>dos Santos Aveiro</py:Apellidos>
-			<py:Edad>35</py:Edad>
-			<py:Nacionalidad>Portuguesa</py:Nacionalidad>
-			<py:FechaNacimiento>1985-02-05</py:FechaNacimiento>
-			<py:Apodo>El bicho</py:Apodo>
-			<py:NroGoles>623</py:NroGoles>
-			<py:Posicion>Delantero</py:Posicion>
-			<py:Dorsal>7</py:Dorsal>
-			<py:Altura>1.87</py:Altura>
-			<py:Peso>83</py:Peso>
+		<rdf:Description rdf:about="http://futbolistas.com/SoccerPlayer/Cristiano-Ronaldo">
+			<py:Name>Cristiano Ronaldo</py:Name>
+			<py:Surname>dos Santos Aveiro</py:Surname>
+			<py:Age>35</py:Age>
+			<py:Nationality>Portuguese</py:Nationality>
+			<py:BirthDate>1985-02-05</py:BirthDate>
+			<py:NickName>El bicho</py:NickName>
+			<py:NumGoals>623</py:NumGoals>
+			<py:Position>Forward</py:Position>
+			<py:Number>7</py:Number>
+			<py:Height>1.87</py:Height>
+			<py:Weight>83</py:Weight>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/jugador/Lionel-Messi">
-			<py:Nombre>Lionel Andrés</py:Nombre>
-			<py:Apellidos>Messi Cuccittini</py:Apellidos>
-			<py:Edad>32</py:Edad>
-			<py:Nacionalidad>Argentina</py:Nacionalidad>
-			<py:FechaNacimiento>1987-06-24</py:FechaNacimiento>
-			<py:Apodo>La Pulga</py:Apodo>
-			<py:NroGoles>622</py:NroGoles>
-			<py:Posicion>Delantero</py:Posicion>
-			<py:Dorsal>10</py:Dorsal>
-			<py:Altura>1.70</py:Altura>
-			<py:Peso>72</py:Peso>
+		<rdf:Description rdf:about="http://futbolistas.com/SoccerPlayer/Lionel-Messi">
+			<py:Name>Lionel Andrés</py:Name>
+			<py:Surname>Messi Cuccittini</py:Surname>
+			<py:Age>32</py:Age>
+			<py:Nationality>Argentine</py:Nationality>
+			<py:BirthDate>1987-06-24</py:BirthDate>
+			<py:NickName>La Pulga</py:NickName>
+			<py:NumGoals>622</py:NumGoals>
+			<py:Position>Forward</py:Position>
+			<py:Number>10</py:Number>
+			<py:Height>1.70</py:Height>
+			<py:Weight>72</py:Weight>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/jugador/Harry-Kane">
-			<py:Nombre>Harry Edward</py:Nombre>
-			<py:Apellidos>Kane</py:Apellidos>
-			<py:Edad>26</py:Edad>
-			<py:Nacionalidad>Inglesa</py:Nacionalidad>
-			<py:FechaNacimiento>1993-07-28</py:FechaNacimiento>
-			<py:Apodo>Hurrikane</py:Apodo>
-			<py:NroGoles>194</py:NroGoles>
-			<py:Posicion>Delantero</py:Posicion>
-			<py:Dorsal>10</py:Dorsal>
-			<py:Altura>1.88</py:Altura>
-			<py:Peso>76</py:Peso>
+		<rdf:Description rdf:about="http://futbolistas.com/SoccerPlayer/Harry-Kane">
+			<py:Name>Harry Edward</py:Name>
+			<py:Surname>Kane</py:Surname>
+			<py:Age>26</py:Age>
+			<py:Nationality>English</py:Nationality>
+			<py:BirthDate>1993-07-28</py:BirthDate>
+			<py:NickName>Hurrikane</py:NickName>
+			<py:NumGoals>194</py:NumGoals>
+			<py:Position>Forward</py:Position>
+			<py:Number>10</py:Number>
+			<py:Height>1.88</py:Height>
+			<py:Weight>76</py:Weight>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/jugador/Virgil-van-Dijk">
-			<py:Nombre>Virgil</py:Nombre>
-			<py:Apellidos>van Dijk</py:Apellidos>
-			<py:Edad>28</py:Edad>
-			<py:Nacionalidad>Neerlandesa</py:Nacionalidad>
-			<py:FechaNacimiento>1991-07-08</py:FechaNacimiento>
-			<py:Apodo>None</py:Apodo>
-			<py:NroGoles>42</py:NroGoles>
-			<py:Posicion>Defensor</py:Posicion>
-			<py:Dorsal>4</py:Dorsal>
-			<py:Altura>1.93</py:Altura>
-			<py:Peso>92</py:Peso>
+		<rdf:Description rdf:about="http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk">
+			<py:Name>Virgil</py:Name>
+			<py:Surname>van Dijk</py:Surname>
+			<py:Age>28</py:Age>
+			<py:Nationality>Dutch</py:Nationality>
+			<py:BirthDate>1991-07-08</py:BirthDate>
+			<py:NickName>None</py:NickName>
+			<py:NumGoals>42</py:NumGoals>
+			<py:Position>Centre-back</py:Position>
+			<py:Number>4</py:Number>
+			<py:Height>1.93</py:Height>
+			<py:Weight>92</py:Weight>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/jugador/Fernandinho">
-			<py:Nombre>Fernando Luiz</py:Nombre>
-			<py:Apellidos>Rosa</py:Apellidos>
-			<py:Edad>34</py:Edad>
-			<py:Nacionalidad>Brasileña</py:Nacionalidad>
-			<py:FechaNacimiento>1985-05-04</py:FechaNacimiento>
-			<py:Apodo>El Calvito</py:Apodo>
-			<py:NroGoles>89</py:NroGoles>
-			<py:Posicion>Centrocampista</py:Posicion>
-			<py:Dorsal>5</py:Dorsal>
-			<py:Altura>1.76</py:Altura>
-			<py:Peso>67</py:Peso>
+		<rdf:Description rdf:about="http://futbolistas.com/SoccerPlayer/Fernandinho">
+			<py:Name>Fernando Luiz</py:Name>
+			<py:Surname>Rosa</py:Surname>
+			<py:Age>34</py:Age>
+			<py:Nationality>Brazilian</py:Nationality>
+			<py:BirthDate>1985-05-04</py:BirthDate>
+			<py:NickName>El Calvito</py:NickName>
+			<py:NumGoals>89</py:NumGoals>
+			<py:Position>Midfielder</py:Position>
+			<py:Number>5</py:Number>
+			<py:Height>1.76</py:Height>
+			<py:Weight>67</py:Weight>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/jugador/Gianluigi-Buffon">
-			<py:Nombre>Gianluigi</py:Nombre>
-			<py:Apellidos>Buffon</py:Apellidos>
-			<py:Edad>42</py:Edad>
-			<py:Nacionalidad>Italiana</py:Nacionalidad>
-			<py:FechaNacimiento>1978-01-28</py:FechaNacimiento>
-			<py:Apodo>Gigi</py:Apodo>
-			<py:NroGoles>0</py:NroGoles>
-			<py:Posicion>Portero</py:Posicion>
-			<py:Dorsal>1</py:Dorsal>
-			<py:Altura>1.92</py:Altura>
-			<py:Peso>92</py:Peso>
+		<rdf:Description rdf:about="http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon">
+			<py:Name>Gianluigi</py:Name>
+			<py:Surname>Buffon</py:Surname>
+			<py:Age>42</py:Age>
+			<py:Nationality>Italian</py:Nationality>
+			<py:BirthDate>1978-01-28</py:BirthDate>
+			<py:NickName>Gigi</py:NickName>
+			<py:NumGoals>0</py:NumGoals>
+			<py:Position>Goalkeeper</py:Position>
+			<py:Number>1</py:Number>
+			<py:Height>1.92</py:Height>
+			<py:Weight>92</py:Weight>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/jugador/Paul-Pogba">
-			<py:Nombre>Paul</py:Nombre>
-			<py:Apellidos>Pogba</py:Apellidos>
-			<py:Edad>26</py:Edad>
-			<py:Nacionalidad>Francesa</py:Nacionalidad>
-			<py:FechaNacimiento>1993-03-15</py:FechaNacimiento>
-			<py:Apodo>Pulpogba</py:Apodo>
-			<py:NroGoles>65</py:NroGoles>
-			<py:Posicion>Centrocampista</py:Posicion>
-			<py:Dorsal>6</py:Dorsal>
-			<py:Altura>1.91</py:Altura>
-			<py:Peso>84</py:Peso>
+		<rdf:Description rdf:about="http://futbolistas.com/SoccerPlayer/Paul-Pogba">
+			<py:Name>Paul</py:Name>
+			<py:Surname>Pogba</py:Surname>
+			<py:Age>26</py:Age>
+			<py:Nationality>French</py:Nationality>
+			<py:BirthDate>1993-03-15</py:BirthDate>
+			<py:NickName>Pulpogba</py:NickName>
+			<py:NumGoals>65</py:NumGoals>
+			<py:Position>Midfielder</py:Position>
+			<py:Number>6</py:Number>
+			<py:Height>1.91</py:Height>
+			<py:Weight>84</py:Weight>
 		</rdf:Description>
 		
 		
 		
-	<!-- ENTRENADORES -->
+	<!-- SportsManager -->
 	
-		<rdf:Description rdf:about="http://futbolistas.com/entrenador/Pep-Guardiola">
-			<tr:Nombre>Josep</tr:Nombre>
-			<tr:Apellidos>Guardiola i Sala</tr:Apellidos>
-			<tr:Edad>49</tr:Edad>
-			<tr:Nacionalidad>Española</tr:Nacionalidad>
-			<tr:FechaNacimiento>1971-01-18</tr:FechaNacimiento>
-			<tr:Apodo>Pep</tr:Apodo>
-			<tr:AñoDebut>2007</tr:AñoDebut>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsManager/Pep-Guardiola">
+			<tr:Name>Josep</tr:Name>
+			<tr:Surname>Guardiola i Sala</tr:Surname>
+			<tr:Age>49</tr:Age>
+			<tr:Nationality>Spanish</tr:Nationality>
+			<tr:BirthDate>1971-01-18</tr:BirthDate>
+			<tr:NickName>Pep</tr:NickName>
+			<tr:Debut>2007</tr:Debut>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/entrenador/Jose-Mourinho">
-			<tr:Nombre>José Mário</tr:Nombre>
-			<tr:Apellidos>dos Santos Mourinho Félix</tr:Apellidos>
-			<tr:Edad>57</tr:Edad>
-			<tr:Nacionalidad>Portuguesa</tr:Nacionalidad>
-			<tr:FechaNacimiento>1963-01-23</tr:FechaNacimiento>
-			<tr:Apodo>Mou</tr:Apodo>
-			<tr:AñoDebut>2000</tr:AñoDebut>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsManager/Jose-Mourinho">
+			<tr:Name>José Mário</tr:Name>
+			<tr:Surname>dos Santos Mourinho Félix</tr:Surname>
+			<tr:Age>57</tr:Age>
+			<tr:Nationality>Portuguese</tr:Nationality>
+			<tr:BirthDate>1963-01-23</tr:BirthDate>
+			<tr:NickName>Mou</tr:NickName>
+			<tr:Debut>2000</tr:Debut>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/entrenador/Carlo-Ancelotti">
-			<tr:Nombre>Carlo Michel Angelo</tr:Nombre>
-			<tr:Apellidos> Ancelotti</tr:Apellidos>
-			<tr:Edad>60</tr:Edad>
-			<tr:Nacionalidad>Italiana</tr:Nacionalidad>
-			<tr:FechaNacimiento>1959-06-10</tr:FechaNacimiento>
-			<tr:Apodo>Carletto</tr:Apodo>
-			<tr:AñoDebut>1995</tr:AñoDebut>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsManager/Carlo-Ancelotti">
+			<tr:Name>Carlo Michel Angelo</tr:Name>
+			<tr:Surname> Ancelotti</tr:Surname>
+			<tr:Age>60</tr:Age>
+			<tr:Nationality>Italian</tr:Nationality>
+			<tr:BirthDate>1959-06-10</tr:BirthDate>
+			<tr:NickName>Carletto</tr:NickName>
+			<tr:Debut>1995</tr:Debut>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/entrenador/Jürgen-Klopp">
-			<tr:Nombre>Jürgen Norbert</tr:Nombre>
-			<tr:Apellidos>Klopp</tr:Apellidos>
-			<tr:Edad>52</tr:Edad>
-			<tr:Nacionalidad>Alemana</tr:Nacionalidad>
-			<tr:FechaNacimiento>1967-06-16</tr:FechaNacimiento>
-			<tr:Apodo>The Normal One</tr:Apodo>
-			<tr:AñoDebut>2001</tr:AñoDebut>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsManager/Jürgen-Klopp">
+			<tr:Name>Jürgen Norbert</tr:Name>
+			<tr:Surname>Klopp</tr:Surname>
+			<tr:Age>52</tr:Age>
+			<tr:Nationality>German</tr:Nationality>
+			<tr:BirthDate>1967-06-16</tr:BirthDate>
+			<tr:NickName>The Normal One</tr:NickName>
+			<tr:Debut>2001</tr:Debut>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/entrenador/Zidane">
-			<tr:Nombre>Zinédine</tr:Nombre>
-			<tr:Apellidos>Zidane</tr:Apellidos>
-			<tr:Edad>47</tr:Edad>
-			<tr:Nacionalidad>Francesa</tr:Nacionalidad>
-			<tr:FechaNacimiento>1972-06-23</tr:FechaNacimiento>
-			<tr:Apodo>Zizou</tr:Apodo>
-			<tr:AñoDebut>2014</tr:AñoDebut>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsManager/Zidane">
+			<tr:Name>Zinédine</tr:Name>
+			<tr:Surname>Zidane</tr:Surname>
+			<tr:Age>47</tr:Age>
+			<tr:Nationality>French</tr:Nationality>
+			<tr:BirthDate>1972-06-23</tr:BirthDate>
+			<tr:NickName>Zizou</tr:NickName>
+			<tr:Debut>2014</tr:Debut>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/entrenador/Diego-Simeone">
-			<tr:Nombre>Diego Pablo</tr:Nombre>
-			<tr:Apellidos>Zidane</tr:Apellidos>
-			<tr:Edad>49</tr:Edad>
-			<tr:Nacionalidad>Argentina</tr:Nacionalidad>
-			<tr:FechaNacimiento>1970-04-28</tr:FechaNacimiento>
-			<tr:Apodo>El Cholo</tr:Apodo>
-			<tr:AñoDebut>2006</tr:AñoDebut>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsManager/Diego-Simeone">
+			<tr:Name>Diego Pablo</tr:Name>
+			<tr:Surname>Simeone</tr:Surname>
+			<tr:Age>49</tr:Age>
+			<tr:Nationality>Argentine</tr:Nationality>
+			<tr:BirthDate>1970-04-28</tr:BirthDate>
+			<tr:NickName>El Cholo</tr:NickName>
+			<tr:Debut>2006</tr:Debut>
 		</rdf:Description>
 		
 	
-	<!-- EQUIPOS -->
+	<!-- SportsTeam -->
 	
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Real-Madrid">
-			<team:Nombre>Real Madrid Club de Fútbol</team:Nombre>
-			<team:Liga>Española</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1897</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Real-Madrid">
+			<team:Name>Real Madrid Club de Fútbol</team:Name>
+			<team:League>La Liga</team:League>
+			<team:Foundation>1902</team:Foundation>
+			<team:NickName>Los merengues</team:NickName>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Barcelona">
-			<team:Nombre>Fútbol Club Barcelona</team:Nombre>
-			<team:Liga>Española</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1899</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Barcelona">
+			<team:Name>Fútbol Club Barcelona</team:Name>
+			<team:League>La Liga</team:League>
+			<team:Foundation>1899</team:Foundation>
+			<team:NickName>Culés</team:NickName>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Tottenham">
-			<team:Nombre>Tottenham Hotspur Football Club</team:Nombre>
-			<team:Liga>Inglesa</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1882</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Tottenham">
+			<team:Name>Tottenham Hotspur Football Club</team:Name>
+			<team:League>Premier League</team:League>
+			<team:Foundation>1882</team:Foundation>
+			<team:NickName>Spurs</team:NickName>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Liverpool">
-			<team:Nombre>Liverpool Football Club</team:Nombre>
-			<team:Liga>Inglesa</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1892</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Liverpool">
+			<team:Name>Liverpool Football Club</team:Name>
+			<team:League>Premier League</team:League>
+			<team:Foundation>1892</team:Foundation>
+			<team:NickName>The Reds</team:NickName>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Manchester-City">
-			<team:Nombre>Manchester City Football Club</team:Nombre>
-			<team:Liga>Inglesa</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1880</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Manchester-City">
+			<team:Name>Manchester City Football Club</team:Name>
+			<team:League>Premier League</team:League>
+			<team:Foundation>1880</team:Foundation>
+			<team:NickName>The Citizens</team:NickName>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Juventus">
-			<team:Nombre>Juventus de Turín</team:Nombre>
-			<team:Liga>Italiana</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1897</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Juventus">
+			<team:Name>Juventus Football Club</team:Name>
+			<team:League>Serie A</team:League>
+			<team:Foundation>1897</team:Foundation>
+			<team:NickName>Vecchia Signora</team:NickName>
 		</rdf:Description>
 
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Manchester-United">
-			<team:Nombre>Manchester United Football Club</team:Nombre>
-			<team:Liga>Inglesa</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1878</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Manchester-United">
+			<team:Name>Manchester United Football Club</team:Name>
+			<team:League>Premier League</team:League>
+			<team:Foundation>1878</team:Foundation>
+			<team:NickName>The Red Devils</team:NickName>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Everton">
-			<team:Nombre>Everton Football Club</team:Nombre>
-			<team:Liga>Inglesa</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1878</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Everton">
+			<team:Name>Everton Football Club</team:Name>
+			<team:League>Premier League</team:League>
+			<team:Foundation>1878</team:Foundation>
+			<team:NickName>The Blues</team:NickName>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/equipo/Atletico-Madrid">
-			<team:Nombre>Club Atlético de Madrid</team:Nombre>
-			<team:Liga>Española</team:Liga>
-			<team:Division>Primera</team:Division>
-			<team:AñoFundacion>1897</team:AñoFundacion>
+		<rdf:Description rdf:about="http://futbolistas.com/SportsTeam/Atletico-Madrid">
+			<team:Name>Club Atlético de Madrid</team:Name>
+			<team:League>La Liga</team:League>
+			<team:Foundation>1903</team:Foundation>
+			<team:NickName>Los Colchoneros</team:NickName>
 		</rdf:Description>
 		
-	<!-- ESTADIOS -->
+	<!-- Arena -->
 	
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Bernabéu">
-			<stdm:Nombre>Santiago Bernabéu</stdm:Nombre>
-			<stdm:Ubicacion>España</stdm:Ubicacion>
-			<stdm:Capacidad>81044</stdm:Capacidad>
-			<stdm:AñoInauguracion>1947</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Bernabéu">
+			<stdm:Name>Santiago Bernabéu</stdm:Name>
+			<stdm:Location>Madrid</stdm:Location>
+			<stdm:Capacity>99454</stdm:Capacity>
+			<stdm:Built>1947</stdm:Built>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Camp-Nou">
-			<stdm:Nombre>Camp Nou</stdm:Nombre>
-			<stdm:Ubicacion>España</stdm:Ubicacion>
-			<stdm:Capacidad>99354</stdm:Capacidad>
-			<stdm:AñoInauguracion>1957</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Camp-Nou">
+			<stdm:Name>Camp Nou</stdm:Name>
+			<stdm:Location>Barcelona</stdm:Location>
+			<stdm:Capacity>99354</stdm:Capacity>
+			<stdm:Built>1954</stdm:Built>
 		</rdf:Description>
 	
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Anfield">
-			<stdm:Nombre>Anfield</stdm:Nombre>
-			<stdm:Ubicacion>Inglaterra</stdm:Ubicacion>
-			<stdm:Capacidad>54074</stdm:Capacidad>
-			<stdm:AñoInauguracion>1884</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Anfield">
+			<stdm:Name>Anfield</stdm:Name>
+			<stdm:Location>Liverpool</stdm:Location>
+			<stdm:Capacity>54074</stdm:Capacity>
+			<stdm:Built>1884</stdm:Built>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Old-Trafford">
-			<stdm:Nombre>Old Trafford</stdm:Nombre>
-			<stdm:Ubicacion>Inglaterra</stdm:Ubicacion>
-			<stdm:Capacidad>74879</stdm:Capacidad>
-			<stdm:AñoInauguracion>1910</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Old-Trafford">
+			<stdm:Name>Old Trafford</stdm:Name>
+			<stdm:Location>Manchester</stdm:Location>
+			<stdm:Capacity>75643</stdm:Capacity>
+			<stdm:Built>1910</stdm:Built>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Etihad-Stadium">
-			<stdm:Nombre>Etihad Stadium</stdm:Nombre>
-			<stdm:Ubicacion>Inglaterra</stdm:Ubicacion>
-			<stdm:Capacidad>55097</stdm:Capacidad>
-			<stdm:AñoInauguracion>2002</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Etihad-Stadium">
+			<stdm:Name>Etihad Stadium</stdm:Name>
+			<stdm:Location>Manchester</stdm:Location>
+			<stdm:Capacity>55097</stdm:Capacity>
+			<stdm:Built>2002</stdm:Built>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Wanda-Metropolitano">
-			<stdm:Nombre>Wanda Metropolitano</stdm:Nombre>
-			<stdm:Ubicacion>España</stdm:Ubicacion>
-			<stdm:Capacidad>68456</stdm:Capacidad>
-			<stdm:AñoInauguracion>2017</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Wanda-Metropolitano">
+			<stdm:Name>Wanda Metropolitano</stdm:Name>
+			<stdm:Location>Madrid</stdm:Location>
+			<stdm:Capacity>68456</stdm:Capacity>
+			<stdm:Built>2017</stdm:Built>
 		</rdf:Description>
 		
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Goodison-Park">
-			<stdm:Nombre>Tottenham Hotspur Stadium</stdm:Nombre>
-			<stdm:Ubicacion>Inglaterra</stdm:Ubicacion>
-			<stdm:Capacidad>40157</stdm:Capacidad>
-			<stdm:AñoInauguracion>1892</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Goodison-Park">
+			<stdm:Name>Tottenham Hotspur Stadium</stdm:Name>
+			<stdm:Location>London</stdm:Location>
+			<stdm:Capacity>40157</stdm:Capacity>
+			<stdm:Built>2019</stdm:Built>
 		</rdf:Description>
 		
 			
-		<rdf:Description rdf:about="http://futbolistas.com/estadio/Allianz-Stadium">
-			<stdm:Nombre>Allianz Stadium</stdm:Nombre>
-			<stdm:Ubicacion>Italia</stdm:Ubicacion>
-			<stdm:Capacidad>41000</stdm:Capacidad>
-			<stdm:AñoInauguracion>2011</stdm:AñoInauguracion>
+		<rdf:Description rdf:about="http://futbolistas.com/Arena/Allianz-Stadium">
+			<stdm:Name>Juventus Stadium</stdm:Name>
+			<stdm:Location>Turin</stdm:Location>
+			<stdm:Capacity>41507</stdm:Capacity>
+			<stdm:Built>2011</stdm:Built>
 		</rdf:Description>
 		
 </rdf:RDF>
