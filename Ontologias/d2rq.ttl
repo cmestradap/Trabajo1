@@ -1,0 +1,282 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql:///futbol";
+	d2rq:username "root";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Table entrenador
+map:entrenador a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "entrenador/@@entrenador.Id_Entrenador@@";
+	d2rq:class vocab:entrenador;
+	d2rq:classDefinitionLabel "entrenador";
+	.
+map:entrenador__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:entrenador;
+	d2rq:property rdfs:label;
+	d2rq:pattern "entrenador #@@entrenador.Id_Entrenador@@";
+	.
+map:entrenador_Id_Entrenador a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:entrenador;
+	d2rq:property vocab:entrenador_Id_Entrenador;
+	d2rq:propertyDefinitionLabel "entrenador Id_Entrenador";
+	d2rq:column "entrenador.Id_Entrenador";
+	d2rq:datatype xsd:integer;
+	.
+map:entrenador_anio_debut a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:entrenador;
+	d2rq:property vocab:entrenador_anio_debut;
+	d2rq:propertyDefinitionLabel "entrenador anio_debut";
+	d2rq:column "entrenador.anio_debut";
+	d2rq:datatype xsd:integer;
+	.
+map:entrenador_FK_Id_Persona__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:entrenador;
+	d2rq:property vocab:entrenador_FK_Id_Persona;
+	d2rq:refersToClassMap map:persona;
+	d2rq:join "entrenador.FK_Id_Persona => persona.id_persona";
+	.
+map:entrenador_FK_Id_equipo__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:entrenador;
+	d2rq:property vocab:entrenador_FK_Id_equipo;
+	d2rq:refersToClassMap map:equipo;
+	d2rq:join "entrenador.FK_Id_equipo => equipo.Id_equipo";
+	.
+
+# Table equipo
+map:equipo a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "equipo/@@equipo.Id_equipo@@";
+	d2rq:class vocab:equipo;
+	d2rq:classDefinitionLabel "equipo";
+	.
+map:equipo__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:equipo;
+	d2rq:property rdfs:label;
+	d2rq:pattern "equipo #@@equipo.Id_equipo@@";
+	.
+map:equipo_Id_equipo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:equipo;
+	d2rq:property vocab:equipo_Id_equipo;
+	d2rq:propertyDefinitionLabel "equipo Id_equipo";
+	d2rq:column "equipo.Id_equipo";
+	d2rq:datatype xsd:integer;
+	.
+map:equipo_Nombre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:equipo;
+	d2rq:property vocab:equipo_Nombre;
+	d2rq:propertyDefinitionLabel "equipo Nombre";
+	d2rq:column "equipo.Nombre";
+	.
+map:equipo_Liga a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:equipo;
+	d2rq:property vocab:equipo_Liga;
+	d2rq:propertyDefinitionLabel "equipo Liga";
+	d2rq:column "equipo.Liga";
+	.
+map:equipo_Division a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:equipo;
+	d2rq:property vocab:equipo_Division;
+	d2rq:propertyDefinitionLabel "equipo Division";
+	d2rq:column "equipo.Division";
+	.
+map:equipo_Anio_inauguracion a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:equipo;
+	d2rq:property vocab:equipo_Anio_inauguracion;
+	d2rq:propertyDefinitionLabel "equipo Anio_inauguracion";
+	d2rq:column "equipo.Anio_inauguracion";
+	d2rq:datatype xsd:integer;
+	.
+map:equipo_FK_Id_Estadio__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:equipo;
+	d2rq:property vocab:equipo_FK_Id_Estadio;
+	d2rq:refersToClassMap map:estadio;
+	d2rq:join "equipo.FK_Id_Estadio => estadio.Id_estadio";
+	.
+
+# Table estadio
+map:estadio a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "estadio/@@estadio.Id_estadio@@";
+	d2rq:class vocab:estadio;
+	d2rq:classDefinitionLabel "estadio";
+	.
+map:estadio__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:estadio;
+	d2rq:property rdfs:label;
+	d2rq:pattern "estadio #@@estadio.Id_estadio@@";
+	.
+map:estadio_Id_estadio a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:estadio;
+	d2rq:property vocab:estadio_Id_estadio;
+	d2rq:propertyDefinitionLabel "estadio Id_estadio";
+	d2rq:column "estadio.Id_estadio";
+	d2rq:datatype xsd:integer;
+	.
+map:estadio_Nombre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:estadio;
+	d2rq:property vocab:estadio_Nombre;
+	d2rq:propertyDefinitionLabel "estadio Nombre";
+	d2rq:column "estadio.Nombre";
+	.
+map:estadio_Ubicacion a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:estadio;
+	d2rq:property vocab:estadio_Ubicacion;
+	d2rq:propertyDefinitionLabel "estadio Ubicacion";
+	d2rq:column "estadio.Ubicacion";
+	.
+map:estadio_Capacidad a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:estadio;
+	d2rq:property vocab:estadio_Capacidad;
+	d2rq:propertyDefinitionLabel "estadio Capacidad";
+	d2rq:column "estadio.Capacidad";
+	d2rq:datatype xsd:integer;
+	.
+
+# Table futbolista
+map:futbolista a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "futbolista/@@futbolista.Id_Futbolista@@";
+	d2rq:class vocab:futbolista;
+	d2rq:classDefinitionLabel "futbolista";
+	.
+map:futbolista__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property rdfs:label;
+	d2rq:pattern "futbolista #@@futbolista.Id_Futbolista@@";
+	.
+map:futbolista_Id_Futbolista a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_Id_Futbolista;
+	d2rq:propertyDefinitionLabel "futbolista Id_Futbolista";
+	d2rq:column "futbolista.Id_Futbolista";
+	d2rq:datatype xsd:integer;
+	.
+map:futbolista_Nro_Goles a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_Nro_Goles;
+	d2rq:propertyDefinitionLabel "futbolista Nro_Goles";
+	d2rq:column "futbolista.Nro_Goles";
+	d2rq:datatype xsd:integer;
+	.
+map:futbolista_Altura a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_Altura;
+	d2rq:propertyDefinitionLabel "futbolista Altura";
+	d2rq:column "futbolista.Altura";
+	d2rq:datatype xsd:double;
+	.
+map:futbolista_Peso a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_Peso;
+	d2rq:propertyDefinitionLabel "futbolista Peso";
+	d2rq:column "futbolista.Peso";
+	d2rq:datatype xsd:integer;
+	.
+map:futbolista_Dorsal a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_Dorsal;
+	d2rq:propertyDefinitionLabel "futbolista Dorsal";
+	d2rq:column "futbolista.Dorsal";
+	d2rq:datatype xsd:integer;
+	.
+map:futbolista_Posicion a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_Posicion;
+	d2rq:propertyDefinitionLabel "futbolista Posicion";
+	d2rq:column "futbolista.Posicion";
+	.
+map:futbolista_FK_Id_Entrenador__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_FK_Id_Entrenador;
+	d2rq:refersToClassMap map:entrenador;
+	d2rq:join "futbolista.FK_Id_Entrenador => entrenador.Id_Entrenador";
+	.
+map:futbolista_FK_Id_persona__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_FK_Id_persona;
+	d2rq:refersToClassMap map:persona;
+	d2rq:join "futbolista.FK_Id_persona => persona.id_persona";
+	.
+map:futbolista_FK_Id_Estadio__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_FK_Id_Estadio;
+	d2rq:refersToClassMap map:estadio;
+	d2rq:join "futbolista.FK_Id_Estadio => estadio.Id_estadio";
+	.
+map:futbolista_FK_Id_Equipo__ref a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:futbolista;
+	d2rq:property vocab:futbolista_FK_Id_Equipo;
+	d2rq:refersToClassMap map:equipo;
+	d2rq:join "futbolista.FK_Id_Equipo => equipo.Id_equipo";
+	.
+
+# Table persona
+map:persona a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "persona/@@persona.id_persona@@";
+	d2rq:class vocab:persona;
+	d2rq:classDefinitionLabel "persona";
+	.
+map:persona__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property rdfs:label;
+	d2rq:pattern "persona #@@persona.id_persona@@";
+	.
+map:persona_id_persona a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property vocab:persona_id_persona;
+	d2rq:propertyDefinitionLabel "persona id_persona";
+	d2rq:column "persona.id_persona";
+	d2rq:datatype xsd:integer;
+	.
+map:persona_Nombre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property vocab:persona_Nombre;
+	d2rq:propertyDefinitionLabel "persona Nombre";
+	d2rq:column "persona.Nombre";
+	.
+map:persona_Apellidos a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property vocab:persona_Apellidos;
+	d2rq:propertyDefinitionLabel "persona Apellidos";
+	d2rq:column "persona.Apellidos";
+	.
+map:persona_Apodo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property vocab:persona_Apodo;
+	d2rq:propertyDefinitionLabel "persona Apodo";
+	d2rq:column "persona.Apodo";
+	.
+map:persona_Edad a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property vocab:persona_Edad;
+	d2rq:propertyDefinitionLabel "persona Edad";
+	d2rq:column "persona.Edad";
+	d2rq:datatype xsd:integer;
+	.
+map:persona_Nacionalidad a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property vocab:persona_Nacionalidad;
+	d2rq:propertyDefinitionLabel "persona Nacionalidad";
+	d2rq:column "persona.Nacionalidad";
+	.
+map:persona_Fecha_Nacimiento a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:persona;
+	d2rq:property vocab:persona_Fecha_Nacimiento;
+	d2rq:propertyDefinitionLabel "persona Fecha_Nacimiento";
+	d2rq:column "persona.Fecha_Nacimiento";
+	d2rq:datatype xsd:date;
+	.
+
