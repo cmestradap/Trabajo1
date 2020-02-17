@@ -1,6 +1,7 @@
 
+import clasesJava.FilterItem;
 import clasesJava.ModelManager;
-import java.awt.Dimension;
+import java.awt.Component;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -16,6 +17,7 @@ public class GUIconsulta1 extends javax.swing.JPanel {
     Collection<String> attributes;
     HashMap<String, JPanel> filterPanels = new HashMap<>();
     JPanel currentFilters;
+    String entity;
     
     private void cargardatos(){
         Collection<String> entities = mm.getEntities();        
@@ -35,33 +37,48 @@ public class GUIconsulta1 extends javax.swing.JPanel {
         cargardatos();  
     }
     
+    private void setData(Collection<String> filters) {
+        if (attributes.size() > 0) {
+            Collection<String> cattr = new ArrayList<>(attributes);
+            cattr.add("obj");
+            Object[][] data = mm.getAttributeValues(entity, attributes, filters);
+            jTable1.setModel(new DefaultTableModel(data, cattr.toArray()));
+            TableColumnModel columns = jTable1.getColumnModel();
+            columns.removeColumn(columns.getColumn(attributes.size()));
+        } else {
+            jTable1.setModel(new DefaultTableModel(new Object[0][0], new Object[0]));
+        }
+    }
+    
     private void changeEntity() {
         Object selected = ListaEntidades.getSelectedValue();
         if (selected == null) {
             return;
         }
-        String entity = selected.toString();
+        entity = selected.toString();
         if (Indirect.isSelected()) {
             Object[][] data = mm.getInstancesIndirect(entity);
             jTable1.setModel(new DefaultTableModel(data, new Object[] { "Name" }));
         } else {
             attributes = mm.getDataAttributes(entity);
-            if (attributes.size() > 0) {
-                Collection<String> cattr = new ArrayList<>(attributes);
-                cattr.add("obj");
-                Object[][] data = mm.getAttributeValues(entity, attributes);
-                jTable1.setModel(new DefaultTableModel(data, cattr.toArray()));
-                TableColumnModel columns = jTable1.getColumnModel();
-                columns.removeColumn(columns.getColumn(attributes.size()));
-            } else {
-                jTable1.setModel(new DefaultTableModel(new Object[0][0], new Object[0]));
-            }
+            setData(null);
         }
         jTable2.setModel(new DefaultTableModel(new Object[0][0], new Object[0]));
         
         JPanel panel = filterPanels.get(entity);
         jScrollPane5.setViewportView(panel);
         currentFilters = panel;
+    }
+    
+    private int attributeIndex(String attribute) {
+        int i = 0;
+        for (String attr : attributes) {
+            if (attr.equals(attribute)) {
+                return i;
+            }
+            ++i;
+        }
+        return -1;
     }
 
     @SuppressWarnings("unchecked")
@@ -164,6 +181,11 @@ public class GUIconsulta1 extends javax.swing.JPanel {
         jButton16.setFocusable(false);
         jButton16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton16.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton16);
 
         jPanel4.setLayout(new javax.swing.BoxLayout(jPanel4, javax.swing.BoxLayout.Y_AXIS));
@@ -260,6 +282,22 @@ public class GUIconsulta1 extends javax.swing.JPanel {
         item.setAttributes(attributes);
         currentFilters.add(item);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        if (currentFilters == null) {
+            return;
+        }
+        ArrayList<String> items = new ArrayList<>();
+        for (Component c : currentFilters.getComponents()) {
+            FilterItemGui fit = (FilterItemGui)c;
+            FilterItem item = fit.getFilter();
+            if (item.isComplete()) {
+                int idx = attributeIndex(item.getAttribute());
+                items.add(item.toString(idx));
+            }
+        }
+        setData(items);
+    }//GEN-LAST:event_jButton16ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

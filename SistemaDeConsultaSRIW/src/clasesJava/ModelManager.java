@@ -58,7 +58,7 @@ public class ModelManager {
         return getResourceNames(resultSet, "?obj");
     }
     
-    public Object[][] getAttributeValues(String entity, Collection<String> attributes)
+    public Object[][] getAttributeValues(String entity, Collection<String> attributes, Collection<String> filters)
     {
         String query = "PREFIX f: <http://www.futbolistas.com#>\nSELECT ?obj";
         for (int i = 0; i < attributes.size(); ++i) {
@@ -70,7 +70,14 @@ public class ModelManager {
         for (String attr : attributes) {
             query += ". ?obj f:" + attr + " ?attr" + i++;
         }
-        query += ".}";
+        query += ".";
+        if (filters != null && filters.size() > 0) {
+            query += " FILTER(";
+            query += String.join(" && ", filters);
+            query += ")";
+        }
+        query += "}";
+        
         i = 0;
         ResultSet resultSet = execQuery(query);
         ArrayList<Object[]> result = new ArrayList<>();

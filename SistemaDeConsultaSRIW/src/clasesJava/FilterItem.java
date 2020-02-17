@@ -1,3 +1,5 @@
+package clasesJava;
+
 /**
  *
  * @author lummoralz
@@ -23,17 +25,14 @@ public class FilterItem {
         return m_value;
     }
     
-    @Override
-    public String toString() {
-        String attr = "?" + m_attribute;
+    public final Boolean isComplete() {
+        return (m_attribute != null && m_attribute != "") && (m_operator != null && m_operator != "") && (m_value != null && m_value != "");
+    }
+        
+    public String toString(int index) {
+        String attr = "?attr" + index;
         switch(m_operator) {
-            case "Igual": {
-                String value = m_value.trim();
-                if (!isNumeric(value)) {
-                    value = "'" + value + "'";
-                }
-                return attr + "=" + value;
-            }
+            case "Igual": return "str(" + attr + ")='" + m_value + "'";
             case "Contiene": return "regex(str(" + attr + "), \"" + m_value + "\")";
             case "Mayor que": return attr + ">" + m_value;
             case "Mayor o igual": return attr + ">=" + m_value;
@@ -41,17 +40,5 @@ public class FilterItem {
             case "Menor o igual": return attr + "<=" + m_value;
         }
         return "";
-    }
-    
-    private static boolean isNumeric(String strNum) {
-        if (strNum == null) {
-            return false;
-        }
-        try {
-            double d = Double.parseDouble(strNum);
-        } catch (NumberFormatException nfe) {
-            return false;
-        }
-        return true;
     }
 }

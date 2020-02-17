@@ -1,17 +1,12 @@
 
+import clasesJava.FilterItem;
+import java.awt.Container;
 import java.util.Collection;
-import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
- * @author user
+ * @author lummoralz
  */
 public class FilterItemGui extends javax.swing.JPanel {
     /**
@@ -28,9 +23,11 @@ public class FilterItemGui extends javax.swing.JPanel {
     }
     
     public FilterItem getFilter() {
+        Object attr = jComboBox1.getSelectedItem();
+        Object op = jComboBox2.getSelectedItem();
         return new FilterItem(
-            jComboBox1.getSelectedItem().toString(),
-            jComboBox2.getSelectedItem().toString(),
+            attr != null ? attr.toString() : null,
+            op != null ? op.toString() : null,
             jTextField1.getText()
         );
     }
@@ -64,6 +61,11 @@ public class FilterItemGui extends javax.swing.JPanel {
         jLabel4.setText("Valor");
 
         jButton1.setText("X");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -88,7 +90,7 @@ public class FilterItemGui extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton1))
                     .addComponent(jLabel4))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,6 +110,13 @@ public class FilterItemGui extends javax.swing.JPanel {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Container parent = getParent();
+        parent.remove(this);
+        parent.invalidate();
+        parent.repaint();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

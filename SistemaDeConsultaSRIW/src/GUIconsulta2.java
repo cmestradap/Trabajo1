@@ -42,7 +42,7 @@ public class GUIconsulta2 extends javax.swing.JPanel {
         if (attributes.size() > 0) {
             Collection<String> cattr = new ArrayList<>(attributes);
             cattr.add("obj");
-            Object[][] data = mm.getAttributeValues(entity, attributes);
+            Object[][] data = mm.getAttributeValues(entity, attributes, null);
             Instances.setModel(new DefaultTableModel(data, cattr.toArray()));
             TableColumnModel columns = Instances.getColumnModel();
             columns.removeColumn(columns.getColumn(attributes.size()));
