@@ -1,3 +1,6 @@
+
+import clasesJava.ModelManager;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +12,13 @@
  * @author ken_1
  */
 public class GUIconsulta4 extends javax.swing.JPanel {
-
+    ModelManager mm;
     /**
      * Creates new form GUIconsulta4
      */
-    public GUIconsulta4() {
+    public GUIconsulta4(ModelManager m) {
         initComponents();
+        mm = m;
     }
 
     /**

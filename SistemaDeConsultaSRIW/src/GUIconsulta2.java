@@ -1,3 +1,12 @@
+
+import clasesJava.ModelManager;
+import java.util.ArrayList;
+import java.util.Collection;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +18,62 @@
  * @author ken_1
  */
 public class GUIconsulta2 extends javax.swing.JPanel {
+    ModelManager mm;
+    String entity;
+    Collection<String> attributes;
+    String attribute;
+    String value;
 
     /**
      * Creates new form GUIconsulta2
      */
-    public GUIconsulta2() {
+    public GUIconsulta2(ModelManager m) {
         initComponents();
+        mm = m;
+        
+        Collection<String> entities = mm.getEntities();   
+        DefaultListModel model = new DefaultListModel<>();
+        model.addAll(entities);
+        Entities.setModel(model);
+    }
+    
+    private void setInstances() {
+        attributes = mm.getDataAttributes(entity);
+        if (attributes.size() > 0) {
+            Collection<String> cattr = new ArrayList<>(attributes);
+            cattr.add("obj");
+            Object[][] data = mm.getAttributeValues(entity, attributes);
+            Instances.setModel(new DefaultTableModel(data, cattr.toArray()));
+            TableColumnModel columns = Instances.getColumnModel();
+            columns.removeColumn(columns.getColumn(attributes.size()));
+        } else {
+            Instances.setModel(new DefaultTableModel(new Object[0][0], new Object[0]));
+        }
+    }
+    
+    private void setResults() {
+        if ((entity != null && entity != "") && (attribute != null && attribute != "") && (value != null)) {
+            Object[][] data = mm.getSameAttributeAs(entity, attribute, value);
+            Object[] header = new Object[] { "Name", attribute };
+            DefaultTableModel model = new DefaultTableModel(data, header);
+            Results.setModel(model);
+        }
+    }
+    
+    private void setEmptyResult(){
+        DefaultTableModel model = new DefaultTableModel(new Object[0][0], new Object[0]);
+        Results.setModel(model);
+    }
+    
+    private int attributeIndex(String attribute) {
+        int i = 0;
+        for (String attr : attributes) {
+            if (attr.equals(attribute)) {
+                return i;
+            }
+            ++i;
+        }
+        return -1;
     }
 
     /**
@@ -26,37 +85,27 @@ public class GUIconsulta2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        Attributes = new javax.swing.JComboBox();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        Results = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-
-        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createTitledBorder(null, "Entidades: ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 14))); // NOI18N
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane2.setViewportView(jTable1);
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setText("Instancias: ");
+        jScrollPane5 = new javax.swing.JScrollPane();
+        Entities = new javax.swing.JList<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Instances = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Atributo:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Attributes.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                AttributesItemStateChanged(evt);
+            }
+        });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        Results.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -64,63 +113,131 @@ public class GUIconsulta2 extends javax.swing.JPanel {
 
             }
         ));
-        jScrollPane3.setViewportView(jTable2);
+        jScrollPane3.setViewportView(Results);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Resultados: ");
+
+        jScrollPane5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Entidades:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 14))); // NOI18N
+
+        Entities.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                EntitiesValueChanged(evt);
+            }
+        });
+        jScrollPane5.setViewportView(Entities);
+
+        Instances.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        Instances.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InstancesMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(Instances);
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel4.setText("Instancias");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
-                .addContainerGap(69, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Attributes, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel3)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 468, Short.MAX_VALUE)
+                        .addComponent(jScrollPane3))
+                    .addComponent(jLabel4))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(25, 25, 25)
-                .addComponent(jLabel2)
-                .addGap(4, 4, 4)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Attributes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void EntitiesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_EntitiesValueChanged
+        entity = Entities.getSelectedValue();
+        DefaultComboBoxModel bmodel = new DefaultComboBoxModel();
+        
+        if (entity != null && entity != "") {
+            setInstances();
+            attributes = mm.getDataAttributes(entity);
+            attribute = null;
+            bmodel.addAll(attributes);
+        }
+        Attributes.setModel(bmodel);
+        setEmptyResult();
+    }//GEN-LAST:event_EntitiesValueChanged
+
+    private void AttributesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_AttributesItemStateChanged
+        Object selected = Attributes.getSelectedItem();
+        if (selected == null) {
+            attribute = null;
+            setEmptyResult();
+        } else {
+            attribute = (String)selected;
+            setResults();
+        }
+    }//GEN-LAST:event_AttributesItemStateChanged
+
+    private void InstancesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InstancesMouseClicked
+        int row = Instances.rowAtPoint(evt.getPoint());
+        if (row == -1 || attribute == null) {
+            value = null;
+            setEmptyResult();
+        } else {
+            int col = attributeIndex(attribute);
+            value = Instances.getModel().getValueAt(row, col).toString();
+            setResults();
+        }
+    }//GEN-LAST:event_InstancesMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox Attributes;
+    private javax.swing.JList<String> Entities;
+    private javax.swing.JTable Instances;
+    private javax.swing.JTable Results;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JScrollPane jScrollPane5;
     // End of variables declaration//GEN-END:variables
 }

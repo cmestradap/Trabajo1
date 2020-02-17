@@ -1,0 +1,1872 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="urn:absolute:www.infosports.com"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="urn:absolute:www.infosports.com">
+    <Prefix name="py" IRI="http://futbolistas.com/SoccerPlayer#"/>
+    <Prefix name="tr" IRI="http://futbolistas.com/SportsManager#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="stdm" IRI="http://futbolistas.com/Stadium#"/>
+    <Prefix name="team" IRI="http://futbolistas.com/SportsTeam#"/>
+    <Prefix name="futbolistas" IRI="http://futbolistas.com/#"/>
+    <Import>file:/E:/RECW/TRABAJO1/d2rq.ttl</Import>
+    <Import>http://www.futbolistas.com</Import>
+    <Declaration>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Carlo-Ancelotti"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="tr:nickname"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Diego-Simeone"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Liverpool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Antoine-Griezmann"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Manchester-United"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Camp-Nou"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Barcelona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Allianz-Stadium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Fernandinho"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="tr:nationality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_by"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="tr:name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#owner_of"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Local_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#train"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Bernabéu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_by"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Atletico-Madrid"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Tottenham"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#host"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Jose-Mourinho"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Paul-Pogba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Anfield"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:train"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_in"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="tr:surname"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#directed_by"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Jürgen-Klopp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Pep-Guardiola"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="tr:debut"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:host"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Wanda-Metropolitano"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Zinedine-Zidane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Etihad-Stadium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Juventus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Harry-Kane"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#tenant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Everton"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="tr:age"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Manchester-City"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Tottenham-Stadium"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:owner_of"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:directed_by"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeamManager"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="tr:birthDate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeamManager"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Real-Madrid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Old-Trafford"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Person"/>
+        <Class IRI="http://www.futbolistas.com#Individual"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <Class IRI="http://www.futbolistas.com#Player"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <Class IRI="http://www.futbolistas.com#Manager"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <Class IRI="http://www.futbolistas.com#Team"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <Class IRI="http://www.futbolistas.com#Stadium"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Person"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Antoine-Griezmann"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Fernandinho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Harry-Kane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Paul-Pogba"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+        <NamedIndividual IRI="http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Carlo-Ancelotti"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Diego-Simeone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Jose-Mourinho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Jürgen-Klopp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Pep-Guardiola"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Zinedine-Zidane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Atletico-Madrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Everton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Juventus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Liverpool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Manchester-City"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Manchester-United"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Real-Madrid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Tottenham"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Allianz-Stadium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Anfield"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Bernabéu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Camp-Nou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Etihad-Stadium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Old-Trafford"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Tottenham-Stadium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Wanda-Metropolitano"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Diego-Simeone"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Entrenador8"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Jose-Mourinho"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Entrenador2"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Jürgen-Klopp"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Entrenador5"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Pep-Guardiola"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Entrenador1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsManager/Zinedine-Zidane"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Entrenador6"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Atletico-Madrid"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Equipo7"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Barcelona"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Equipo2"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Juventus"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Equipo6"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Liverpool"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Equipo4"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Manchester-City"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Equipo5"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Real-Madrid"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Equipo1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/SportsTeam/Tottenham"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Equipo3"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Allianz-Stadium"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Estadio7"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Anfield"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Estadio3"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Bernabéu"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Estadio1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Camp-Nou"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Estadio2"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Etihad-Stadium"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Estadio4"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Tottenham-Stadium"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Estadio6"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="http://futbolistas.com/Stadium/Wanda-Metropolitano"/>
+        <NamedIndividual IRI="http://www.futbolistas.com#Estadio5"/>
+    </SameIndividual>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Local_in"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#Local_in"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeam"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#currentTeam"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeamManager"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#currentTeamManager"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#directed_by"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#directed_by"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#host"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#host"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#owner_of"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#owner_of"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#tenant"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#tenant"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#train"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#train"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_by"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#trained_by"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_in"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#trained_in"/>
+    </EquivalentObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Local_in"/>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#tenant"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeam"/>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#owner_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeamManager"/>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#directed_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#host"/>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_in"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#train"/>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_by"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.futbolistas.com#Local_in"/>
+        <ObjectProperty IRI="http://www.futbolistas.com#tenant"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Local_in"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeam"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeamManager"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#directed_by"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#host"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#owner_of"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#tenant"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#train"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_by"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_in"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Local_in"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeam"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#currentTeamManager"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#directed_by"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#host"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#owner_of"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#tenant"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsTeam"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#train"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SoccerPlayer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_by"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#SportsManager"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#trained_in"/>
+        <Class IRI="file:/E:/RECW/TRABAJO1/Futbolistas%20(2).rdf#Stadium"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>28</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>1991-03-21</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>1.75</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>Antoine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>French</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>Principito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>7</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>197</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>Forward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>Griezmann</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+        <Literal>73</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_by"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>34</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>1985-05-04</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>1.76</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>Fernando Luiz</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>Brazilian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>El Calvito</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>89</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>Midfielder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>Rosa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+        <Literal>67</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>42</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>1978-01-28</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>1.92</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>Gianluigi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>Italian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>Gigi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>0</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>Goalkeeper</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>Buffon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gianluigi-Buffon</IRI>
+        <Literal>92</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>32</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>1987-12-10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>1.84</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>Gonzalo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>Argentine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>El Pipita</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>9</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>304</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>Forward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>Higuaín</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+        <Literal>75</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_by"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>26</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>1993-07-28</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>1.88</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>Harry Edward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>English</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>Hurrikane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>194</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>Forward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>Kane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+        <Literal>76</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>26</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>1993-03-15</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>1.91</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>Paul</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>French</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>Pulpogba</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>6</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>65</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>Midfielder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>Pogba</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+        <Literal>84</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeam"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_by"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:trained_in"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:age"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>28</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:birthDate"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>1991-07-08</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:height"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>1.93</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:name"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>Virgil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nationality"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>Dutch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:nickname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>None</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:number"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>4</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:numgoals"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>42</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:position"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>Centre-back</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:surname"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>van Dijk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="py:weight"/>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+        <Literal>92</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeamManager"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Everton</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:age"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <Literal>60</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:birthDate"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <Literal>1959-06-10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:debut"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <Literal>1995</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:name"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <Literal>Carlo Michel Angelo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nationality"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <Literal>Italian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nickname"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <Literal>Carletto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:surname"/>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+        <Literal> Ancelotti</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeamManager"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:age"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <Literal>49</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:birthDate"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <Literal>1970-04-28</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:debut"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <Literal>2006</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:name"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <Literal>Diego Pablo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nationality"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <Literal>Argentine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nickname"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <Literal>El Cholo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:surname"/>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+        <Literal>Simeone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeamManager"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:train"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:age"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <Literal>57</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:birthDate"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <Literal>1963-01-23</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:debut"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <Literal>2000</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:name"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <Literal>José Mário</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nationality"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <Literal>Portuguese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nickname"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <Literal>Mou</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:surname"/>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+        <Literal>dos Santos Mourinho Félix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeamManager"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:train"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:age"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <Literal>52</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:birthDate"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <Literal>1967-06-16</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:debut"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <Literal>2001</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:name"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <Literal>Jürgen Norbert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nationality"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <Literal>German</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nickname"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <Literal>The Normal One</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:surname"/>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+        <Literal>Klopp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeamManager"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:train"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:age"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <Literal>49</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:birthDate"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <Literal>1971-01-18</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:debut"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <Literal>2007</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:name"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <Literal>Josep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nationality"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <Literal>Spanish</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nickname"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <Literal>Pep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:surname"/>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+        <Literal>Guardiola i Sala</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:currentTeamManager"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:age"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <Literal>47</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:birthDate"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <Literal>1972-06-23</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:debut"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <Literal>2014</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:name"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <Literal>Zinédine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nationality"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <Literal>French</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:nickname"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <Literal>Zizou</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="tr:surname"/>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+        <Literal>Zidane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+        <IRI>http://futbolistas.com/Stadium/Wanda-Metropolitano</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:directed_by"/>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Diego-Simeone</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+        <Literal>1903</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+        <Literal>La Liga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+        <Literal>Club Atlético de Madrid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+        <Literal>Los Colchoneros</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:owner_of"/>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+        <Literal>1899</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+        <Literal>La Liga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+        <Literal>Fútbol Club Barcelona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+        <Literal>Culés</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:directed_by"/>
+        <IRI>http://futbolistas.com/SportsTeam/Everton</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Carlo-Ancelotti</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Everton</IRI>
+        <Literal>1878</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Everton</IRI>
+        <Literal>Premier league</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Everton</IRI>
+        <Literal>Everton Football Club</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Everton</IRI>
+        <Literal>The Blues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:owner_of"/>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+        <Literal>1897</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+        <Literal>Serie A</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+        <Literal>Juventus Football Club</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+        <Literal>Vecchia Signora</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:directed_by"/>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Jürgen-Klopp</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:owner_of"/>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+        <Literal>1892</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+        <Literal>Premier league</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+        <Literal>Liverpool Football Club</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+        <Literal>The Reds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:directed_by"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Pep-Guardiola</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:owner_of"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+        <Literal>1880</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+        <Literal>Premier league</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+        <Literal>Manchester City Football Club</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+        <Literal>The Citizens</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:owner_of"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+        <Literal>1878</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+        <Literal>Premier league</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+        <Literal>Manchester United Football Club</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+        <Literal>The Red Devils</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+        <IRI>http://futbolistas.com/Stadium/Bernabéu</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:directed_by"/>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Zinedine-Zidane</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+        <Literal>1902</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+        <Literal>La Liga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+        <Literal>Real Madrid Club de Fútbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+        <Literal>Los merengues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:Local_in"/>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:directed_by"/>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+        <IRI>http://futbolistas.com/SportsManager/Jose-Mourinho</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:owner_of"/>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:foundation"/>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+        <Literal>1882</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:league"/>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+        <Literal>Premier league</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:name"/>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+        <Literal>Tottenham Hotspur Football Club</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="team:nick"/>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+        <Literal>Spurs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:host"/>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Gonzalo-Higuaín</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Juventus</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+        <Literal>2011</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+        <Literal>41507</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+        <Literal>Turin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Allianz-Stadium</IRI>
+        <Literal>Juventus Stadium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:host"/>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Virgil-van-Dijk</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Liverpool</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+        <Literal>1884</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+        <Literal>54074</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+        <Literal>Liverpool</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Anfield</IRI>
+        <Literal>Anfield</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Bernabéu</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Real-Madrid</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Bernabéu</IRI>
+        <Literal>1947</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Bernabéu</IRI>
+        <Literal>99454</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Bernabéu</IRI>
+        <Literal>Madrid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Bernabéu</IRI>
+        <Literal>Santiago Bernabéu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:host"/>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Antoine-Griezmann</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Barcelona</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+        <Literal>1954</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+        <Literal>99354</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+        <Literal>Barcelona</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Camp-Nou</IRI>
+        <Literal>Camp Nou</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:host"/>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Fernandinho</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-City</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+        <Literal>2002</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+        <Literal>55097</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+        <Literal>Manchester</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Etihad-Stadium</IRI>
+        <Literal>Etihad Stadium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:host"/>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Paul-Pogba</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Manchester-United</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+        <Literal>1910</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+        <Literal>75643</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+        <Literal>Manchester</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Old-Trafford</IRI>
+        <Literal>Old Trafford</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:host"/>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+        <IRI>http://futbolistas.com/SoccerPlayer/Harry-Kane</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Tottenham</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+        <Literal>2019</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+        <Literal>62062</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+        <Literal>London</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Tottenham-Stadium</IRI>
+        <Literal>Tottenham Hotspur Stadium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="futbolistas:tenant"/>
+        <IRI>http://futbolistas.com/Stadium/Wanda-Metropolitano</IRI>
+        <IRI>http://futbolistas.com/SportsTeam/Atletico-Madrid</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:built"/>
+        <IRI>http://futbolistas.com/Stadium/Wanda-Metropolitano</IRI>
+        <Literal>2017</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:capacity"/>
+        <IRI>http://futbolistas.com/Stadium/Wanda-Metropolitano</IRI>
+        <Literal>68456</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:location"/>
+        <IRI>http://futbolistas.com/Stadium/Wanda-Metropolitano</IRI>
+        <Literal>Madrid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="stdm:name"/>
+        <IRI>http://futbolistas.com/Stadium/Wanda-Metropolitano</IRI>
+        <Literal>Wanda Metropolitano</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

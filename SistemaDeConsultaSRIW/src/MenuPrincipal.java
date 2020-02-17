@@ -24,17 +24,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
         add(consulta1);
         consulta1.setVisible(false);
         
-        consulta2 = new GUIconsulta2();
+        consulta2 = new GUIconsulta2(model);
         consulta2.setBounds(330,10,1120,510); 
         add(consulta2);
         consulta2.setVisible(false);
         
-        consulta3 = new GUIconsulta3();
+        consulta3 = new GUIconsulta3(model);
         consulta3.setBounds(330,10,1120,510); 
         add(consulta3);
         consulta3.setVisible(false);
         
-        consulta4 = new GUIconsulta4();
+        consulta4 = new GUIconsulta4(model);
         consulta4.setBounds(330,10,1120,510); 
         add(consulta4);
         consulta4.setVisible(false);

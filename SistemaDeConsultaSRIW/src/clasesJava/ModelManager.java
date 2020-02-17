@@ -52,6 +52,12 @@ public class ModelManager {
         return getNodeNames(resultSet, "?prop");
     }
     
+    public Collection<String> getInstances(String entity) {
+        String query = "PREFIX f: <http://www.futbolistas.com#>\nSELECT ?obj WHERE { ?obj a f:" + entity + ". } ORDER BY ?obj";
+        ResultSet resultSet = execQuery(query);
+        return getResourceNames(resultSet, "?obj");
+    }
+    
     public Object[][] getAttributeValues(String entity, Collection<String> attributes)
     {
         String query = "PREFIX f: <http://www.futbolistas.com#>\nSELECT ?obj";
@@ -77,12 +83,18 @@ public class ModelManager {
             row[attributes.size()] = solution.get("?obj").asResource().getLocalName();
             result.add(row);
         }
-        i = 0;
-        Object[][] data = new Object[result.size()][];
-        for (Object[] row : result) {
-            data[i++] = row;
+        return convert(result);
+    }
+    
+    public Object[][] getInstancesIndirect(String entity) {
+        String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX f: <http://www.futbolistas.com#>\nSELECT DISTINCT ?obj ?name WHERE { ?obj a ?class. ?obj f:Name ?name. { ?class rdfs:subClassOf f:" + entity + ". } UNION { ?obj a f:" + entity + " }.}";
+        ResultSet resultSet = execQuery(query);
+        ArrayList<Object[]> result = new ArrayList<>();
+        while (resultSet.hasNext()) {
+            QuerySolution solution = resultSet.next();
+            result.add(new Object[] { solution.get("?name").asLiteral().getValue() });
         }
-        return data;
+        return convert(result);
     }
     
     public Collection<String> getSameAs(String instance) {
@@ -99,6 +111,21 @@ public class ModelManager {
             QuerySolution solution = resultSet.next();
             result.add(new Object[] { solution.get("?rel").asResource().getLocalName(), solution.get("?val").asResource().getLocalName() });
         }
+        return convert(result);
+    }
+    
+    public Object[][] getSameAttributeAs(String entity, String attribute, String value) {
+        String query = "PREFIX f: <http://www.futbolistas.com#>\nSELECT DISTINCT ?name ?val WHERE { ?obj a f:" + entity + ". ?obj f:" + attribute + " ?val. ?obj f:Name ?name. FILTER(STR(?val) = '" + value + "')}";
+        ResultSet resultSet = execQuery(query);
+        ArrayList<Object[]> result = new ArrayList<>();
+        while (resultSet.hasNext()) {
+            QuerySolution solution = resultSet.next();
+            result.add(new Object[] { solution.get("?name").asLiteral().getValue(), solution.get("?val").asLiteral().getValue() });
+        }
+        return convert(result);
+    }
+    
+    private Object[][] convert(ArrayList<Object[]> result) {
         Integer i = 0;
         Object[][] data = new Object[result.size()][];
         for (Object[] row : result) {
@@ -130,7 +157,6 @@ public class ModelManager {
         while (resultSet.hasNext())
         {
           QuerySolution solution = resultSet.next();
-          
           entities.add(solution.get(node).asResource().getLocalName());
         }
         return entities;
