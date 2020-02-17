@@ -1,0 +1,78 @@
+### CONSULTA_3 
+----consultar entidades------
+
+SELECT DISTINCT ?clase
+WHERE
+{
+?clase rdfs:subClassOf ?objeto .
+}
+
+
+----consultar los atributos de la entidad escogida------
+
+SELECT DISTINCT ?data_property 
+WHERE {
+?data_property rdf:type owl:DatatypeProperty .
+?data_property rdfs:domain ?class.
+FILTER(regex(str(?class), "Team"))
+}
+
+---- conteo de instancias con valor en atributo  (MAX, MIN, PROMEDIO) -----
+
+PREFIX Futbol: <http://www.futbolistas.com#>
+SELECT (COUNT (DISTINCT (?instancia)) AS ?conteoInstancias) (MAX(?valorAtributo) AS ?maximo) (MIN(?valorAtributo) AS ?minimo)  (AVG(?valorAtributo) AS ?promedio)
+WHERE
+{
+?instancia a ?class .
+?instancia a owl:NamedIndividual.
+?instancia Futbol:Name  ?valorAtributo.
+?class a owl:Class .
+FILTER(regex(str(?class), "Stadium"))
+}
+
+----opcion2 con la longitud de cadena ---
+PREFIX Futbol: <http://www.futbolistas.com#>
+SELECT   (COUNT (DISTINCT (?instancia)) AS ?conteoInstancias) (MAX(?valorAtributo) AS ?maximo) (MIN(?valorAtributo) AS ?minimo)  (AVG(?valorAtributo) AS ?promedio)  (AVG(?longitudCadena) AS ?promedioLonCadena)
+WHERE{
+{
+SELECT  DISTINCT?class ?instancia ?valorAtributo (STRLEN(?valorAtributo)AS ?longitudCadena)
+WHERE
+{
+?instancia a ?class .
+?instancia a owl:NamedIndividual.
+?instancia Futbol:Built  ?valorAtributo.
+?class a owl:Class .
+FILTER(regex(str(?class), "Stadium"))
+}
+}
+}
+
+
+---------  para los filtros en atributos de valor numerico-------------
+PREFIX Futbol: <http://www.futbolistas.com#>
+SELECT (COUNT (DISTINCT (?instancia)) AS ?conteoInstancias) (MAX(?valorAtributo) AS ?maximo) (MIN(?valorAtributo) AS ?minimo)  (AVG(?valorAtributo) AS ?promedio)
+WHERE
+{
+?instancia a ?class .
+?instancia a owl:NamedIndividual.
+?instancia Futbol:Built  ?valorAtributo FILTER(?valorAtributo < 2000).
+?class a owl:Class .
+FILTER(regex(str(?class), "Stadium"))
+}
+
+-------- para los filtros en atributos con valor de texto -----------
+PREFIX Futbol: <http://www.futbolistas.com#>
+SELECT   (COUNT (DISTINCT (?instancia)) AS ?conteoInstancias) (MAX(?valorAtributo) AS ?maximo) (MIN(?valorAtributo) AS ?minimo)  (AVG(?valorAtributo) AS ?promedio)  (AVG(?longitudCadena) AS ?promedioLonCadena)
+WHERE{
+{
+SELECT  DISTINCT?class ?instancia ?valorAtributo (STRLEN(?valorAtributo)AS ?longitudCadena)
+WHERE
+{
+?instancia a ?class .
+?instancia a owl:NamedIndividual.
+?instancia Futbol:Built  ?valorAtributo FILTER REGEX(?valorAtributo, "an","i").
+?class a owl:Class .
+FILTER(regex(str(?class), "Stadium"))
+}
+}
+}
