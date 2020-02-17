@@ -1,4 +1,9 @@
 
+import clasesJava.ModelManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 public class MenuPrincipal extends javax.swing.JFrame {
 
     GUIconsulta1 consulta1;
@@ -6,31 +11,35 @@ public class MenuPrincipal extends javax.swing.JFrame {
     GUIconsulta3 consulta3;
     GUIconsulta4 consulta4;
     
-    public MenuPrincipal() {
+    ModelManager model;
+    
+    public MenuPrincipal() throws Exception {
         initComponents();
         setSize(325,510);
-        consulta1 = new GUIconsulta1();
+        
+        model = new ModelManager("../F1.owl");
+        consulta1 = new GUIconsulta1(model);
         //los dos primeros son para la distancias con los botones de consulta
         consulta1.setBounds(330,10,1120,510); 
         add(consulta1);
         consulta1.setVisible(false);
         
-        consulta2 = new GUIconsulta2();
+        consulta2 = new GUIconsulta2(model);
         consulta2.setBounds(330,10,1120,510); 
         add(consulta2);
         consulta2.setVisible(false);
         
-        consulta3 = new GUIconsulta3();
+        consulta3 = new GUIconsulta3(model);
         consulta3.setBounds(330,10,1120,510); 
         add(consulta3);
         consulta3.setVisible(false);
         
-        consulta4 = new GUIconsulta4();
+        consulta4 = new GUIconsulta4(model);
         consulta4.setBounds(330,10,1120,510); 
         add(consulta4);
         consulta4.setVisible(false);
         
-        
+   
     }
 
     /**
@@ -259,7 +268,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuPrincipal().setVisible(true);
+                try {
+                    new MenuPrincipal().setVisible(true);
+                } catch (Exception ex) {
+                    Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
