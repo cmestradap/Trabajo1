@@ -1,0 +1,3 @@
+generate-mapping -u root -o d2rq.ttl jdbc:mysql:///futbol
+
+d2r-server d2rq.ttl
