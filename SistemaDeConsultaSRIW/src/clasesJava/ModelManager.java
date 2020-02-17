@@ -43,27 +43,95 @@ public class ModelManager {
 
     public Collection<String> getEntities() {
         ResultSet resultSet = execQuery("PREFIX owl: <http://www.w3.org/2002/07/owl#>\nSELECT DISTINCT ?class WHERE { ?class a owl:Class. FILTER(?class != owl:Thing) }");
-        return getLocalNames(resultSet, "?class");
+        return getNodeNames(resultSet, "?class");
     }
     
     public Collection<String> getDataAttributes(String entity) {
-        ResultSet resultSet = execQuery("PREFIX f: <http://www.futbolistas.com#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT DISTINCT ?prop WHERE { ?prop a owl:DatatypeProperty. ?prop rdfs:domain f:" + entity + ". }");
-        return getLocalNames(resultSet, "?prop");
+        String query = "PREFIX f: <http://www.futbolistas.com#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT DISTINCT ?prop WHERE { ?prop a owl:DatatypeProperty. ?prop rdfs:domain f:" + entity + ". }";
+        ResultSet resultSet = execQuery(query);
+        return getNodeNames(resultSet, "?prop");
+    }
+    
+    public Object[][] getAttributeValues(String entity, Collection<String> attributes)
+    {
+        String query = "PREFIX f: <http://www.futbolistas.com#>\nSELECT ?obj";
+        for (int i = 0; i < attributes.size(); ++i) {
+            query += " ?attr" + i;
+        }
+        query += " WHERE { ?obj a f:" + entity;
+        
+        Integer i = 0;
+        for (String attr : attributes) {
+            query += ". ?obj f:" + attr + " ?attr" + i++;
+        }
+        query += ".}";
+        i = 0;
+        ResultSet resultSet = execQuery(query);
+        ArrayList<Object[]> result = new ArrayList<>();
+        while (resultSet.hasNext()) {
+            QuerySolution solution = resultSet.next();
+            Object[] row = new Object[attributes.size() + 1];
+            for (i = 0; i < attributes.size(); ++i) {
+                row[i] = solution.get("?attr" + i).asLiteral().getValue();
+            }
+            row[attributes.size()] = solution.get("?obj").asResource().getLocalName();
+            result.add(row);
+        }
+        i = 0;
+        Object[][] data = new Object[result.size()][];
+        for (Object[] row : result) {
+            data[i++] = row;
+        }
+        return data;
+    }
+    
+    public Collection<String> getSameAs(String instance) {
+        String query = "PREFIX f: <http://www.futbolistas.com#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nSELECT DISTINCT ?other WHERE {?obj a owl:NamedIndividual. ?obj owl:sameAs ?other. FILTER(?obj = f:" + instance + ") }";
+        ResultSet resultSet = execQuery(query);
+        return getResourceNames(resultSet, "?other");
+    }
+    
+    public Object[][] getRelations(String instance) {
+        String query = "PREFIX f: <http://www.futbolistas.com#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nSELECT DISTINCT ?rel ?val WHERE {?obj a owl:NamedIndividual.?obj ?rel ?val.?rel a owl:ObjectProperty. FILTER(?obj = f:" + instance + ") }";
+        ResultSet resultSet = execQuery(query);
+        ArrayList<Object[]> result = new ArrayList<>();
+        while (resultSet.hasNext()) {
+            QuerySolution solution = resultSet.next();
+            result.add(new Object[] { solution.get("?rel").asResource().getLocalName(), solution.get("?val").asResource().getLocalName() });
+        }
+        Integer i = 0;
+        Object[][] data = new Object[result.size()][];
+        for (Object[] row : result) {
+            data[i++] = row;
+        }
+        return data;
     }
     
     private ResultSet execQuery(String queryStr)
     {
+        System.out.println(queryStr);
         Query query = QueryFactory.create(queryStr);
         QueryExecution qexec = QueryExecutionFactory.create(query, m_model);
         return qexec.execSelect();
     }
     
-    private Collection<String> getLocalNames(ResultSet resultSet, String node) {
+    private Collection<String> getNodeNames(ResultSet resultSet, String node) {
         ArrayList<String> entities = new ArrayList<>();
         while (resultSet.hasNext())
         {
           QuerySolution solution = resultSet.next();
           entities.add(solution.get(node).asNode().getLocalName());
+        }
+        return entities;
+    }
+    
+    private Collection<String> getResourceNames(ResultSet resultSet, String node) {
+        ArrayList<String> entities = new ArrayList<>();
+        while (resultSet.hasNext())
+        {
+          QuerySolution solution = resultSet.next();
+          
+          entities.add(solution.get(node).asResource().getLocalName());
         }
         return entities;
     }

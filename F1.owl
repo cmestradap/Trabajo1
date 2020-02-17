@@ -747,6 +747,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.futbolistas.com#Jugador1">
         <rdf:type rdf:resource="http://www.futbolistas.com#Player"/>
+        <owl:sameAs rdf:resource="http://www.futbolistas.com#Jugador5"/>
         <www:currentTeam rdf:resource="http://www.futbolistas.com#Equipo8"/>
         <www:trained_by rdf:resource="http://www.futbolistas.com#Entrenador3"/>
         <www:trained_in rdf:resource="http://www.futbolistas.com#Estadio8"/>
